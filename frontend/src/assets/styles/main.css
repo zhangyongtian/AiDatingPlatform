@@ -1,0 +1,40 @@
+:root {
+  /* 浪漫温馨的配色方案 */
+  --primary-color: #ff6b6b;      /* 浪漫粉红 */
+  --secondary-color: #ffd93d;    /* 温暖黄色 */
+  --accent-color: #6c5ce7;       /* 梦幻紫色 */
+  --background-color: #fff0f3;   /* 柔和背景色 */
+  --text-color: #2d3436;         /* 文字颜色 */
+  
+  /* 字体 */
+  --font-family: 'Quicksand', 'PingFang SC', sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--font-family);
+  color: var(--text-color);
+}
+
+/* 优雅的卡片样式 */
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* 动画效果 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+} 

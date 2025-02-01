@@ -1,0 +1,128 @@
+show databases;
+--create database dating_platform;
+
+--CREATE TABLE `user` (
+--  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+--  `username` varchar(50) NOT NULL COMMENT '用户名',
+--  `password` varchar(100) NOT NULL COMMENT '密码',
+--  `gender` varchar(10) DEFAULT NULL COMMENT '性别',
+--  `age` int(11) DEFAULT NULL COMMENT '年龄',
+--  `city` varchar(50) DEFAULT NULL COMMENT '城市',
+--  `income` varchar(50) DEFAULT NULL COMMENT '收入',
+--  `education` int(11) DEFAULT NULL COMMENT '教育程度',
+--  `marital_status` int(11) DEFAULT NULL COMMENT '婚姻状态',
+--  `mbti` varchar(10) DEFAULT NULL COMMENT 'MBTI类型',
+--  `avatar_url` varchar(255) DEFAULT NULL COMMENT '头像URL',
+--  `beauty_score` int(11) DEFAULT NULL COMMENT '颜值评分',
+--  `beauty_score_explanation` text COMMENT '颜值评分说明',
+--  `height` int(11) DEFAULT NULL COMMENT '身高',
+--  `core_values_scores` text COMMENT '核心价值观评分',
+--  `lifestyle_scores` text COMMENT '生活方式评分',
+--  `communication_scores` text COMMENT '沟通方式评分',
+--  `condition_scores` text COMMENT '现实条件评分',
+--  `total_scores` text COMMENT '总评分',
+--  `beauty_analysis` text COMMENT '颜值分析',
+--  `beauty_suggestions` text COMMENT '颜值建议',
+--  `score_explanation` text COMMENT '评分说明',
+--  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+--  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+--  `version` int(11) NOT NULL DEFAULT '1' COMMENT '版本号',
+--  `deleted` int(11) NOT NULL DEFAULT '0' COMMENT '是否删除',
+--  PRIMARY KEY (`id`),
+--  UNIQUE KEY `uk_username` (`username`)
+--) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COMMENT='用户表';
+
+--INSERT INTO MY_TABLE(id, username, password, gender, age, city, income, education, marital_status, mbti, avatar_url, beauty_score, beauty_score_explanation, height, core_values_scores, lifestyle_scores, communication_scores, condition_scores, total_scores, beauty_analysis, beauty_suggestions, score_explanation, create_time, update_time, version, deleted) VALUES (1, '凤姐', '1', 'female', 25, '杭州', '10k-20k', 2, 1, 'INTJ', 'https://zhaloblog.oss-cn-beijing.aliyuncs.com/avatar/1/e217a9b1-38d9-40b6-b9a6-68109332023d.jpg', 70, '{
+--  "beautyScore": 70,
+--  "beautyAnalysis": [
+--    {
+--      "label": "五官特征",
+--      "score": 70,
+--      "details": "眼睛稍小，不十分对称；嘴唇厚度适中，微笑自然"
+--    },
+--    {
+--      "label": "轮廓特征",
+--      "score": 70,
+--      "details": "面部线条柔和，下巴略圆滑；额头饱满，无过多修饰"
+--    },
+--    {
+--      "label": "肤质特征",
+--      "score": 70,
+--      "details": "肌肤细腻光滑，略有油脂分泌；肤色白皙，没有明显色斑或痘痘"
+--    },
+--    {
+--      "label": "气质特征",
+--      "score": 70,
+--      "details": "表情亲切随和，散发出亲民气息；穿着得体大方，符合场合要求"
+--    }
+--  ],
+--  "beautySuggestions": [
+--    "建议加强眼部训练以改善不对称情况",
+--    "尝试调整嘴角的角度来提升微笑效果",
+--    "保持良好的饮食习惯并注重保湿控油保养",
+--    "选择适合自身风格的服装搭配增强个人魅力"
+--  ]
+--}', 180, '100_100_100_100_90_100_100_100', '100_100_100_100_100_100', '100_100_100_100', '100_100_100_100', '0', '[{"label":"五官特征","score":70,"details":"眼睛稍小，不十分对称；嘴唇厚度适中，微笑自然"},{"label":"轮廓特征","score":70,"details":"面部线条柔和，下巴略圆滑；额头饱满，无过多修饰"},{"label":"肤质特征","score":70,"details":"肌肤细腻光滑，略有油脂分泌；肤色白皙，没有明显色斑或痘痘"},{"label":"气质特征","score":70,"details":"表情亲切随和，散发出亲民气息；穿着得体大方，符合场合要求"}]', '["建议加强眼部训练以改善不对称情况","尝试调整嘴角的角度来提升微笑效果","保持良好的饮食习惯并注重保湿控油保养","选择适合自身风格的服装搭配增强个人魅力"]', null, '2025-01-31 05:15:35', '2025-01-31 10:42:09', 1, 0);
+--INSERT INTO MY_TABLE(id, username, password, gender, age, city, income, education, marital_status, mbti, avatar_url, beauty_score, beauty_score_explanation, height, core_values_scores, lifestyle_scores, communication_scores, condition_scores, total_scores, beauty_analysis, beauty_suggestions, score_explanation, create_time, update_time, version, deleted) VALUES (2, '王嘉尔', '1', 'male', 26, '杭州', '50k以上', 3, 1, 'ISTJ', 'https://zhaloblog.oss-cn-beijing.aliyuncs.com/avatar/2/09689152-214d-4f3a-8593-b506d0b0199d.jpg', 78, '{
+--  "beautyScore": 78,
+--  "beautyAnalysis": [
+--    {
+--      "label": "五官特征",
+--      "score": 75,
+--      "details": "眼睛稍小，略不协调；嘴唇厚度适中，微笑自然"
+--    },
+--    {
+--      "label": "轮廓特征",
+--      "score": 75,
+--      "details": "面部线条柔和，下巴圆润；额头饱满，略有抬头纹"
+--    },
+--    {
+--      "label": "肤质特征",
+--      "score": 75,
+--      "details": "肤色白皙，无痘痘或疤痕；肌肤细腻光滑，油脂分泌正常"
+--    },
+--    {
+--      "label": "气质特征",
+--      "score": 75,
+--      "details": "表情生动活泼，富有感染力；穿着休闲舒适，散发出青春活力的气息"
+--    }
+--  ],
+--  "beautySuggestions": [
+--    "建议加强眼部训练以改善视觉效果",
+--    "注意保持颈部肌肉放松，避免出现颈纹",
+--    "定期使用抗皱产品预防早期老化迹象",
+--    "尝试调整发型来突出面部优点并遮盖缺点"
+--  ]
+--}', 180, '100_100_100_100_100_100_100_100', '100_100_100_100_100_100', '100_100_100_100', '100_100_100_100', '0', '[{"label":"五官特征","score":75,"details":"眼睛稍小，略不协调；嘴唇厚度适中，微笑自然"},{"label":"轮廓特征","score":75,"details":"面部线条柔和，下巴圆润；额头饱满，略有抬头纹"},{"label":"肤质特征","score":75,"details":"肤色白皙，无痘痘或疤痕；肌肤细腻光滑，油脂分泌正常"},{"label":"气质特征","score":75,"details":"表情生动活泼，富有感染力；穿着休闲舒适，散发出青春活力的气息"}]', '["建议加强眼部训练以改善视觉效果","注意保持颈部肌肉放松，避免出现颈纹","定期使用抗皱产品预防早期老化迹象","尝试调整发型来突出面部优点并遮盖缺点"]', null, '2025-01-31 10:40:44', '2025-02-01 02:51:33', 1, 0);
+--INSERT INTO MY_TABLE(id, username, password, gender, age, city, income, education, marital_status, mbti, avatar_url, beauty_score, beauty_score_explanation, height, core_values_scores, lifestyle_scores, communication_scores, condition_scores, total_scores, beauty_analysis, beauty_suggestions, score_explanation, create_time, update_time, version, deleted) VALUES (3, '赵露思', '1', 'female', 19, '杭州', '20k-50k', 3, 1, 'ISFP', 'https://zhaloblog.oss-cn-beijing.aliyuncs.com/avatar/3/e126b337-e281-4a7f-898a-ab8218e726fa.jpg', 80, '{
+--  "beautyScore": 80,
+--  "beautyAnalysis": [
+--    {
+--      "label": "五官特征",
+--      "score": 80,
+--      "details": "眼睛稍小，略不协调；嘴唇厚度适中，微笑自然"
+--    },
+--    {
+--      "label": "轮廓特征",
+--      "score": 80,
+--      "details": "面部线条柔和，下巴圆润；额头饱满，略有抬头纹"
+--    },
+--    {
+--      "label": "肤质特征",
+--      "score": 80,
+--      "details": "肌肤细腻光滑，无痘痘或斑点；肤色白皙，有些许油光"
+--    },
+--    {
+--      "label": "气质特征",
+--      "score": 80,
+--      "details": "表情生动活泼，富有感染力；整体造型时尚大方"
+--    }
+--  ],
+--  "beautySuggestions": [
+--    "加强眼部训练以改善视觉效果",
+--    "注重日常保养，减少抬头纹出现的可能性",
+--    "保持良好的饮食习惯并适当运动来维持肌肤健康",
+--    "尝试使用控油产品控制油脂分泌过多的问题",
+--    "在化妆技巧上下功夫提升整体形象"
+--  ]
+--}', 177, '100_100_100_100_100_100_100_100', '100_100_100_100_100_100', '100_100_100_100', '100_100_100_100', '0', '[{"label":"五官特征","score":80,"details":"眼睛稍小，略不协调；嘴唇厚度适中，微笑自然"},{"label":"轮廓特征","score":80,"details":"面部线条柔和，下巴圆润；额头饱满，略有抬头纹"},{"label":"肤质特征","score":80,"details":"肌肤细腻光滑，无痘痘或斑点；肤色白皙，有些许油光"},{"label":"气质特征","score":80,"details":"表情生动活泼，富有感染力；整体造型时尚大方"}]', '["加强眼部训练以改善视觉效果","注重日常保养，减少抬头纹出现的可能性","保持良好的饮食习惯并适当运动来维持肌肤健康","尝试使用控油产品控制油脂分泌过多的问题","在化妆技巧上下功夫提升整体形象"]', null, '2025-01-31 11:48:55', '2025-02-01 03:01:00', 1, 0);
